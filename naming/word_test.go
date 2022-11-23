@@ -64,7 +64,7 @@ func TestGetWord(t *testing.T) {
 			lang.GetWord(p, val.group)
 		}
 
-		list := strings.Join(lang.Words.General[val.group][:], ", ")
+		list := strings.Join(lang.Words.General[val.group], ", ")
 
 		fmt.Printf("Get words [%v]: %v\n", val.group, list)
 	}
@@ -87,7 +87,7 @@ func TestRandomLang(t *testing.T) {
 			lang.GetWord(p, val.group)
 		}
 
-		list := strings.Join(lang.Words.General[val.group][:], ", ")
+		list := strings.Join(lang.Words.General[val.group], ", ")
 
 		fmt.Printf("Random lang words [%v]: %v\n", val.group, list)
 	}

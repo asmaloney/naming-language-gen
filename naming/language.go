@@ -103,7 +103,7 @@ func (lang Language) Describe() {
 	fmt.Printf("      F:  %v\n", lang.Phonemes["F"])
 	fmt.Printf("      L:  %v\n", lang.Phonemes["L"])
 
-	fmt.Printf("-> restrictions: %v\n", strings.Join(lang.SyllableRestrictions[:], ", "))
+	fmt.Printf("-> restrictions: %v\n", strings.Join(lang.SyllableRestrictions, ", "))
 
 	if lang.ApplyOrtho {
 		fmt.Printf("-> consonant ortho:\n")
@@ -121,7 +121,7 @@ func (lang Language) Describe() {
 		fmt.Printf("-> morphemes:\n")
 		for k, v := range lang.Morphemes {
 			fmt.Printf(" >  '%v'\n", k)
-			fmt.Printf("      %v\n", strings.Join(v[:], ", "))
+			fmt.Printf("      %v\n", strings.Join(v, ", "))
 		}
 	}
 }
