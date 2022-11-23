@@ -1,3 +1,5 @@
+[![GitHub](https://img.shields.io/github/license/asmaloney/naming-language-gen)](LICENSE) ![Build](https://github.com/asmaloney/naming-language-gen/actions/workflows/build.yaml/badge.svg)
+
 # Naming Language Gen
 
 This is a quick port of [Martin O'Leary](https://mewo2.com)'s [naming-language](https://github.com/mewo2/naming-language) code from JavaScript to Go. He describes in detail what it does in his [blog post](https://mewo2.com/notes/naming-language/).
