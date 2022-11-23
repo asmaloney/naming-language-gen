@@ -1,0 +1,25 @@
+linters:
+  enable:
+    - bodyclose
+    - dupl
+    - exportloopref
+    - goconst
+    - gocritic
+    - goerr113
+    - goprintffuncname
+    - gosec
+    - maintidx
+    - prealloc
+    - thelper
+    - unconvert
+    - unparam
+
+linters-settings:
+  goconst:
+    min-len: 8
+    min-occurrences: 3
+  govet:
+    check-shadowing: true
+  gosec:
+    excludes:
+      - G404 # Insecure random number source (rand)

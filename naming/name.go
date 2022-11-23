@@ -3,6 +3,9 @@ package naming
 import (
 	"math/rand"
 	"strings"
+
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 )
 
 type NameParams struct {
@@ -36,20 +39,22 @@ func (lang *Language) MakeName(params *NameParams) (name string) {
 
 	joinersLen := len(params.Joiners)
 
+	titleCase := cases.Title(language.Und)
+
 	for {
 		if rand.Float32() < 0.5 {
-			name = strings.Title(lang.GetWord(params.WordParams, params.Group))
+			name = titleCase.String(lang.GetWord(params.WordParams, params.Group))
 		} else {
 			g := ""
 			if rand.Float32() < 0.6 {
 				g = params.Group
 			}
-			w1 := strings.Title(lang.GetWord(params.WordParams, g))
+			w1 := titleCase.String(lang.GetWord(params.WordParams, g))
 			g = ""
 			if rand.Float32() < 0.6 {
 				g = params.Group
 			}
-			w2 := strings.Title(lang.GetWord(params.WordParams, g))
+			w2 := titleCase.String(lang.GetWord(params.WordParams, g))
 			if w1 == w2 {
 				continue
 			}

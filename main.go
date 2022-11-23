@@ -39,7 +39,7 @@ func main() {
 		lang.GetWord(p, group)
 	}
 
-	wordList := strings.Join(lang.Words.General[group][:], ", ")
+	wordList := strings.Join(lang.Words.General[group], ", ")
 	fmt.Printf("[%v]: %v\n", group, wordList)
 
 	// generate some names
@@ -61,7 +61,7 @@ func main() {
 		lang.MakeName(&params)
 	}
 
-	nameList := strings.Join(lang.Words.Names[:], ", ")
+	nameList := strings.Join(lang.Words.Names, ", ")
 	fmt.Printf("[%v]: %v\n", "names", nameList)
 
 	lang.Describe()

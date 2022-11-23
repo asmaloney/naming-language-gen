@@ -57,6 +57,6 @@ func TestNames(t *testing.T) {
 			list = append(list, lang.MakeName(&params))
 		}
 
-		fmt.Printf("Make names [%v]: %v\n", val.group, strings.Join(list[:], ", "))
+		fmt.Printf("Make names [%v]: %v\n", val.group, strings.Join(list, ", "))
 	}
 }
